@@ -1,0 +1,80 @@
+[global]
+    follow = mouse
+    width = (0, 500)
+    height = 950
+    origin = bottom-right
+    offset = 48x60
+    scale = 0
+    notification_limit = 3
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 1
+    icon_corner_radius = 0
+    indicate_hidden = yes
+    transparency = 5
+    separator_height = 2
+    padding = 15
+    horizontal_padding = 15
+    text_icon_padding = 0
+    frame_width = 3
+    frame_color = "#aaaaaa"
+    gap_size = 0
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
+    font = FiraMono Nerd Font Mono 10
+    line_height = 12
+    markup = full
+    format = "<b><u>%s</u></b>\n%b\n"
+    alignment = left
+    vertical_alignment = top
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = end
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    enable_recursive_icon_lookup = true
+    icon_theme = "Mint-Y-Red"
+    icon_position = left
+    min_icon_size = 48
+    max_icon_size = 128
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    sticky_history = yes
+    history_length = 50
+    dmenu = /usr/bin/dmenu -i -fn Ubuntu-18 -l 30 -p dunst:
+    browser = qutebrowser
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    corner_radius = 9
+    ignore_dbusclose = false
+    mouse_left_click = do_action
+    mouse_middle_click = close_all
+    mouse_right_click = close_current
+
+[experimental]
+    per_monitor_dpi = false
+
+[urgency_low]
+    background = "#000000"
+    foreground = "#950101"
+    frame_color = "#950101"
+    timeout = 3
+
+[urgency_normal]
+    background = "#000000"
+    foreground = "#ffffff"
+    frame_color = "#950101"
+    highlight = "#FF0000"
+    timeout = 3
+
+[urgency_critical]
+    background = "#000000"
+    foreground = "#950101"
+    frame_color = "#950101"
+    timeout = 5
