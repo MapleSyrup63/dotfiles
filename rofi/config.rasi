@@ -1,5 +1,3 @@
-
-
 * {
   normal-background: #00000099;
   normal-foreground: #FFFFFFbb;
@@ -14,15 +12,12 @@ window {
   padding: 1em;
 
   border-color: #950101;
-  border:       3px;
-  border-radius: 10px;
+  border:       2px;
 
   width:  1024px; 
   height: 768px;
 
-  background-color: #950101;
-
-  background-image: url("/home/maplesyrup123/Pictures/random/red hex.jpg", width);
+  background-color: #000000;
 }
 
 mainbox {
@@ -31,7 +26,6 @@ mainbox {
 }
 
 element {
-  background: transparent;
   children: [ element-icon, element-text ];
 }
 element,element-text,element-icon, button {
@@ -41,32 +35,26 @@ element,element-text,element-icon, button {
 inputbar {
   margin: 0px 0px 0.5em 0em;
   spacing: 0.4em;
-  children: [ button-iggy1, entry,overlay,case-indicator, button-iggy2];
+  children: [ button-mapleleaf, entry,overlay,case-indicator, button-mapleleaf];
 }
 
-button-iggy1, button-iggy2 {
+button-mapleleaf {
   expand: false;
-  content: "🍁";
-  action: "kb-primary-paste";
+  content: " 🍁 ";
   horizontal-align: 0.5;
-}
-button-iggy2 {
-  action: "kb-screenshot";
 }
 
 listview, inputbar, message {
   padding: 0.5em;  
   border-color: #950101;
-  border:        3px;
-  border-radius: 10px;
+  border:        2px;
   background-color: black/70%;
 
-  columns: 6;
-  lines:   5;
+  columns: 3;
+  lines:   3;
 }
 listview {
-  border:       0px 3px 3px 3px;
-  border-radius: 0px 0px 10px 10px;
+  border:       0px 2px 2px 2px;
 }
 
 
@@ -75,17 +63,14 @@ element {
     padding:      10px;
     font:         "FiraMono Nerd Font 8";
     orientation: vertical;
-    background-color: #FF0000;
 }
 element-icon {
-  size: 4em;
+  size: 5em;
 }
 
 element  selected {
-  border-color: #FF0000;
-  border:       3px;
-  border-radius: 10px;
-  background-color: #FF0000;
+  border-color: #950101;
+  border:       2px;
 }
 
 element-text, element-icon {
@@ -112,7 +97,7 @@ icon-ms-ic1,icon-ms-ic2 {
     size: 16;
     vertical-align: 0.8;
     expand:        false;
-    border:       0px 0px 3px ;
+    border:       0px 0px 2px ;
     border-color: #950101;
 }
 
@@ -123,15 +108,26 @@ mode-switcher {
 }
 button {
     text-color: white;
-    border:       0px 0px 3px ;
+    border:       0px 0px 0px 0px;
     border-color: #950101;
-    border-radius:    3px 3px 0 0;
-    background-image: linear-gradient(to bottom, #00000088, black/70%);
+    background-image: linear-gradient(to bottom, #000000, #950101);
     horizontal-align: 0.5;
 }
 button selected.normal {
     text-color: white;
     margin: 0px;
+    padding: 0px;
+
+    border:       0px 0px 0px 0px ;
+    border-color: #950101;
+    background-image: linear-gradient(to bottom, #350101, #950101);
+}
+
+entry {
+    placeholder: "Where to?";
+    placeholder-color: darkgrey/90%;
+    text-color: #FFFFFF;
+  }
     padding: 0px;
 
     border:       3px 3px 0px ;
