@@ -7,7 +7,7 @@
 #     VARIABLES 
 #####################
 
-# key bind variables
+# Key bind variables
 set $mod Mod4
 set $smod Shift
 floating_modifier $mod
@@ -22,20 +22,20 @@ set $numpad_off_8 KP_Up
 set $numpad_off_9 KP_Prior
 set $numpad_off_0 KP_Insert
 
-# COLORS
+# Colors
 set $wm_color_border_active_bg       #950101
 set $wm_color_border_active_fg       #950101
 set $wm_color_border_inactive_bg     #3D0000
 set $wm_color_border_inactive_fg     #3D0000
 set $wm_color_background             #3D0000
 
-# default terminal command
-set $terminal xfce4-terminal
-
-# default application finder command
+# Terminal, replace with whichever terminal you use
+set $terminal kitty
+ 
+# Application finder command
 set $rofi "rofi -modi drun,run -show drun -show-icons"
 
-# fonts
+# Set Font size to 0, so borders are by themselves
 set $wm_font pango: FiraMono Nerd Font 0
 font $wm_font
 
@@ -44,34 +44,37 @@ font $wm_font
 #     COMMANDS 
 #####################
 
-# start a terminal
+# Start a terminal
 bindsym $mod+Return exec $terminal
 
-# kill focused window
-bindsym $mod+$smod+q kill
+# Kill focused window
+bindsym $mod+q kill
 
-# start rofi
+# Start rofi
 bindsym $mod+d exec $rofi
 
-# switch focus using cursor keys
+# Open screenshot utility
+bindsym Print exec xfce4-screenshooter
+
+# Switch focus using cursor keys
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused tile, you can use smod + the cursor keys:
+# Move focused tile, you can use smod + the cursor keys:
 bindsym $mod+$smod+Left move left
 bindsym $mod+$smod+Down move down
 bindsym $mod+$smod+Up move up
 bindsym $mod+$smod+Right move right
 
-# split in horizontal orientation
+# Split in horizontal orientation
 bindsym $mod+h split h
 
-# split in vertical orientation
+# Split in vertical orientation
 bindsym $mod+v split v
 
-# switch to resizing mode
+# Switch to resizing mode
 bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -97,27 +100,27 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-# enter fullscreen mode for the focused container
+# Fullscreen
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# Change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# Toggle tiling / floating
 bindsym $mod+$smod+space floating toggle
 
-# change focus between tiling / floating windows
+# Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# reload the configuration file
+# Reload the configuration file
 bindsym $mod+$smod+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+$smod+r restart
 
-# exit i3 (logs you out of your X session)
+# Exit i3 (logs you out of your X session)
 bindsym $mod+$smod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -133,7 +136,7 @@ set $ws8 "8/ Any1 "
 set $ws9 "9/ Any2 "
 set $ws10 "10/󰝚 Tunes "
 
-# switch to workspaces using numpad (numlock off)
+# Switch to workspaces using numpad (numlock off)
 bindsym $mod+$numpad_off_1 workspace $ws1
 bindsym $mod+$numpad_off_2 workspace $ws2
 bindsym $mod+$numpad_off_3 workspace $ws3
@@ -145,7 +148,9 @@ bindsym $mod+$numpad_off_8 workspace $ws8
 bindsym $mod+$numpad_off_9 workspace $ws9
 bindsym $mod+$numpad_off_0 workspace $ws10
 
-# move focused container to workspace using numpad (numlock off)
+bindsym $mod+Tab workspace back_and_forth
+
+# Move focused container to workspace using numpad (numlock off)
 bindsym $mod+$smod+$numpad_off_1 move container to workspace $ws1
 bindsym $mod+$smod+$numpad_off_2 move container to workspace $ws2
 bindsym $mod+$smod+$numpad_off_3 move container to workspace $ws3
@@ -157,42 +162,35 @@ bindsym $mod+$smod+$numpad_off_8 move container to workspace $ws8
 bindsym $mod+$smod+$numpad_off_9 move container to workspace $ws9
 bindsym $mod+$smod+$numpad_off_0 move container to workspace $ws10
 
+bindsym $mod+$smod+Tab move container to workspace back_and_forth
+
 #####################
 #    APPLICATION
 #      ORDERS 
 #####################
 
 # Force certain applications to load on certain workspaces
-assign [class="firefox"] $ws1
 assign [class="librewolf"] $ws1
-assign [class="Google-chrome"] $ws1
+assign [class="google-chrome"] $ws1
 
-assign [class="Code"] $ws2
+assign [class="code-oss"] $ws2
 
 assign [class="Godot"] $ws3
-assign [class="Unityhub"] $ws3
 
-assign [class="Xfce4-terminal"] $ws4
+assign [class="kitty"] $ws4
 
-assign [class="Thunar"] $ws5
+assign [class="thunar"] $ws5
 
 assign [class="discord"] $ws6
-
-assign [class="Steam"] $ws7
-assign [class="hl2_linux"] $ws7   # TF2 and other Source engine games
-assign [class="minecraft-launcher"] $ws7
-
-assign [class="Rhythmbox"] $ws10
-
 
 #####################
 #    APPEARANCE
 #####################
-# gaps
+# Gaps
 gaps inner 4
 gaps outer 2
 
-default_border pixel 1
+default_border pixel 2
 
 # class                 border                       background                   text                         indicator                    child_border
 client.focused          $wm_color_border_active_bg   $wm_color_border_active_bg   $wm_color_border_active_fg   $wm_color_border_active_bg   $wm_color_border_active_bg
@@ -208,8 +206,11 @@ client.background       $wm_color_background
 #####################
 # picom 
 exec --no-startup-id picom
-# background
-exec_always nitrogen --restore
 # polybar
 exec_always killall -q polybar; polybar
-
+# network manager applet
+exec_always killall -q nm-applet; nm-applet
+# wallpaper
+exec_always killall -q feh; feh --bg-fill $HOME/Pictures/wallpapers/red_4.jpg
+# the fuking clipboard, everything runs on this file lmao
+exec_always killall -q xfce4-clipman; xfce4-clipman
