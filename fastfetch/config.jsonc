@@ -1,7 +1,7 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-               "source": "/home/maplesyrup123/Pictures/ASCII_images/ascii_maple.txt",
+               "source": "/home/maplesyrup63/Pictures/ASCII_images/ascii_maple.txt",
                 "color": {"1": "red"},
                 "padding": {
                   "top": 2,
@@ -10,28 +10,29 @@
         },
     "modules": [
         "break",
+        "break",
         {
             "type": "custom",
             "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
         },
         {
-            "type": "host",
-            "key": " PC",
+            "type": "Board",
+            "key": "   PC",
             "keyColor": "red"
         },
         {
             "type": "cpu",
-            "key": "│ ├",
+            "key": "  ├󰍛 CPU",
             "keyColor": "red"
         },
         {
             "type": "gpu",
-            "key": "│ ├󰍛",
+            "key": "  ├󱔽 GPU",
             "keyColor": "red"
         },
         {
             "type": "memory",
-            "key": "│ ├󰍛",
+            "key": "  └ RAM",
             "keyColor": "red"
         },
         {
@@ -45,59 +46,48 @@
         },
         {
             "type": "os",
-            "key": " OS",
+            "key": "   OS",
+            "keyColor": "red"
+        },
+                {
+            "type": "BIOS",
+            "key": "  ├ BIOS  ",
             "keyColor": "red"
         },
         {
             "type": "kernel",
-            "key": "│ ├",
+            "key": "  ├󰞸 Kernel",
             "keyColor": "red"
         },
         {
             "type": "packages",
-            "key": "│ ├󰏖",
-            "keyColor": "red"
-        },
-        {
-            "type": "shell",
-            "key": "└ └",
-            "keyColor": "red"
-        },
-        "break",
-        {
-            "type": "de",
-            "key": " DE",
+            "key": "  ├󰏖 Pkgs  ",
             "keyColor": "red"
         },
         {
             "type": "lm",
-            "key": "│ ├",
+            "key": "  ├󰹑 DM    ",
             "keyColor": "red"
         },
         {
             "type": "wm",
-            "key": "│ ├",
-            "keyColor": "red"
-        },
-        {
-            "type": "wmtheme",
-            "key": "│ ├󰉼",
+            "key": "  ├ WM    ",
             "keyColor": "red"
         },
         {
             "type": "terminal",
-            "key": "└ └",
+            "key": "  ├ Term  ",
+            "keyColor": "red"
+        },
+        {
+            "type": "shell",
+            "key": "  └󰳗 Shell ",
             "keyColor": "red"
         },
         {
             "type": "custom",
             "format": "\u001b[90m└────────────────────────────────────────────────────┘"
         },
-
-//        {
-//            "type": "colors"
-//        },
-
         {
             "type": "colors",
             "paddingLeft": 2,
@@ -107,4 +97,3 @@
  
     ]
 }
-
