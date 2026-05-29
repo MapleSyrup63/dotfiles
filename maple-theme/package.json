@@ -1,0 +1,17 @@
+{
+  "name": "maple-theme",
+  "displayName": "Maple Theme",
+  "version": "0.6.7",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Maple Theme",
+        "uiTheme": "vs-dark",
+        "path": "./theme.json"
+      }
+    ]
+  }
+}
