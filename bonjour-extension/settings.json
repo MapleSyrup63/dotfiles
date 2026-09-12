@@ -1,0 +1,262 @@
+{
+  "about": {
+    "browser": "firefox",
+    "version": "22.3.0"
+  },
+  "advanced": {
+    "altMode": true,
+    "escKey": true
+  },
+  "showall": true,
+  "lang": "en",
+  "dark": "enable",
+  "favicon": "🍁",
+  "tabtitle": "New tab",
+  "greeting": "",
+  "greetingsize": "3",
+  "greetingsmode": "custom",
+  "pagegap": 1,
+  "pagewidth": 1600,
+  "time": true,
+  "main": true,
+  "dateformat": "eu",
+  "quicklinks": true,
+  "textShadow": 0.15,
+  "announcements": "off",
+  "review": 0,
+  "css": "",
+  "hide": {
+    "settingsicon": true,
+    "clock": false,
+    "date": false,
+    "greetings": true,
+    "weatherdesc": true,
+    "weathericon": false
+  },
+  "clock": {
+    "size": 0.75,
+    "ampm": false,
+    "analog": false,
+    "seconds": false,
+    "ampmlabel": false,
+    "ampmposition": "top-left",
+    "worldclocks": false,
+    "timezone": "America/Lima"
+  },
+  "linkstyle": "small",
+  "linktitles": false,
+  "linkbackgrounds": false,
+  "linknewtab": false,
+  "linksrow": "5",
+  "linkiconradius": "2.4",
+  "linkgroups": {
+    "on": false,
+    "selected": "default",
+    "groups": [
+      "default"
+    ],
+    "pinned": [],
+    "synced": []
+  },
+  "backgrounds": {
+    "type": "files",
+    "fadein": 100,
+    "blur": 5,
+    "bright": 0.8,
+    "frequency": "pause",
+    "color": "#185A63",
+    "urls": "",
+    "images": "bonjourr-images-daylight",
+    "videos": "bonjourr-videos-daylight",
+    "mute": true,
+    "queries": {},
+    "texture": {
+      "type": "none"
+    }
+  },
+  "worldclocks": [],
+  "analogstyle": {
+    "face": "none",
+    "hands": "modern",
+    "shape": "round",
+    "border": "#ffff",
+    "background": "#fff2"
+  },
+  "weather": {
+    "city": "cercado",
+    "unit": "metric",
+    "provider": "",
+    "moreinfo": "none",
+    "forecast": "auto",
+    "temperature": "feelslike",
+    "geolocation": "approximate"
+  },
+  "greetingscustom": {
+    "morning": "",
+    "afternoon": "",
+    "evening": "",
+    "night": ""
+  },
+  "notes": {
+    "on": false,
+    "background": "#fff0",
+    "width": 70,
+    "opacity": 0.1,
+    "align": "left",
+    "text": "                           .-----.\n                           .-----.\n"
+  },
+  "searchbar": {
+    "on": true,
+    "background": "#fff3",
+    "opacity": 0.1,
+    "newtab": false,
+    "suggestions": false,
+    "engine": "ddg",
+    "request": "",
+    "placeholder": "🍁 Where to now?"
+  },
+  "quotes": {
+    "on": false,
+    "type": "user",
+    "frequency": "tabs",
+    "author": false,
+    "last": 1789184549000,
+    "userlist": "trdy, aaaaa                                aa."
+  },
+  "pomodoro": {
+    "on": false,
+    "mode": "pomodoro",
+    "pause": 0,
+    "end": 0,
+    "timeFor": {
+      "pomodoro": 1500,
+      "break": 300,
+      "longbreak": 1200
+    },
+    "focus": false,
+    "sound": true,
+    "history": []
+  },
+  "font": {
+    "size": "14.1",
+    "family": "",
+    "system": true,
+    "weightlist": [],
+    "weight": "300"
+  },
+  "supporters": {
+    "enabled": false
+  },
+  "move": {
+    "selection": "single",
+    "layouts": {
+      "single": {
+        "items": {
+          "time": {
+            "text": "",
+            "box": "end center"
+          },
+          "main": {
+            "text": "",
+            "box": "baseline center"
+          },
+          "quicklinks": {
+            "text": "",
+            "box": "baseline center"
+          },
+          "notes": {
+            "text": "right",
+            "box": ""
+          },
+          "searchbar": {
+            "text": "",
+            "box": "baseline center"
+          }
+        },
+        "grid": [
+          [
+            "time"
+          ],
+          [
+            "main"
+          ],
+          [
+            "searchbar"
+          ],
+          [
+            "quicklinks"
+          ]
+        ]
+      },
+      "triple": {
+        "items": {},
+        "grid": [
+          [
+            ".",
+            "time",
+            "quotes"
+          ],
+          [
+            ".",
+            "main",
+            "quotes"
+          ],
+          [
+            ".",
+            "quicklinks",
+            "quotes"
+          ]
+        ]
+      },
+      "double": {
+        "items": {},
+        "grid": [
+          [
+            "time",
+            "."
+          ],
+          [
+            "main",
+            "."
+          ],
+          [
+            "searchbar",
+            "."
+          ],
+          [
+            "quicklinks",
+            "."
+          ]
+        ]
+      }
+    }
+  },
+  "linksfepfbp": {
+    "_id": "linksfepfbp",
+    "parent": "default",
+    "order": 3,
+    "title": "Cursos",
+    "url": "https://aulavirtual.upc.edu.pe/ultra/course"
+  },
+  "linksnorcno": {
+    "_id": "linksnorcno",
+    "parent": "default",
+    "order": 2,
+    "title": "Calendar",
+    "url": "https://calendar.proton.me/u/0/"
+  },
+  "linksneopme": {
+    "_id": "linksneopme",
+    "parent": "default",
+    "order": 1,
+    "title": "Proton",
+    "url": "https://mail.proton.me/u/0/inbox"
+  },
+  "linksepiphn": {
+    "_id": "linksepiphn",
+    "parent": "default",
+    "order": 0,
+    "title": "WhatsApp",
+    "url": "https://web.whatsapp.com/"
+  }
+}
