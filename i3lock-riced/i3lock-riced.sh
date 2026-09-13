@@ -12,4 +12,37 @@ magick /tmp/screenshot.png -blur 0x4 /tmp/blur.png
 
 composite -gravity southeast "$CURRENT_DIR/Teto-by-@m1ng_0.png" /tmp/blur.png /tmp/lock.png
 
-i3lock -i /tmp/lock.png
+# FINALY WE GET TO THE COLORS AHAHAHAHAHAHAH
+RED='950101'
+TRED='950101aa'
+FULLRED='ff0000'
+
+BLACK='000000'
+TBLACK='000000aa'
+T='00000000'
+
+WHITE='dddddd'
+TWHITE='ddddddaa'
+
+YELLOW='933d06'
+
+i3lock -i /tmp/lock.png -k --indicator \
+--insidever-color=$TBLACK     \
+--ringver-color=$RED   \
+\
+--insidewrong-color=$TBLACK   \
+--ringwrong-color=$RED     \
+\
+--inside-color=$TBLACK        \
+--ring-color=$RED        \
+--line-color=$TRED          \
+--separator-color=$FULLRED   \
+\
+--verif-color=$WHITE          \
+--wrong-color=$RED          \
+--time-color=$WHITE           \
+--date-color=$WHITE           \
+--layout-color=$WHITE         \
+--keyhl-color=$FULLRED         \
+--bshl-color=$FULLRED       \
+
