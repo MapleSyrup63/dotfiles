@@ -10,6 +10,7 @@
 # Key bind variables
 set $mod Mod4
 set $smod Shift
+set $alt Mod1
 floating_modifier $mod
 set $numpad_off_1 KP_End
 set $numpad_off_2 KP_Down
@@ -36,7 +37,7 @@ set $terminal kitty
 set $rofi "rofi -modi drun,run -show drun -show-icons"
 
 # Set Font size to 0, so borders are by themselves
-set $wm_font pango: FiraMono Nerd Font 0
+set $wm_font pango: MapleMono NL NF CN 0
 font $wm_font
 
 
@@ -55,6 +56,9 @@ bindsym $mod+d exec $rofi
 
 # Open screenshot utility
 bindsym Print exec xfce4-screenshooter
+
+# i3-lock
+bindsym Scroll_Lock exec /bin/i3lock-riced/i3lock-riced.sh
 
 # Switch focus using cursor keys
 bindsym $mod+Left focus left
@@ -148,7 +152,7 @@ bindsym $mod+$numpad_off_8 workspace $ws8
 bindsym $mod+$numpad_off_9 workspace $ws9
 bindsym $mod+$numpad_off_0 workspace $ws10
 
-bindsym $mod+Tab workspace back_and_forth
+bindsym $alt+Tab workspace back_and_forth
 
 # Move focused container to workspace using numpad (numlock off)
 bindsym $mod+$smod+$numpad_off_1 move container to workspace $ws1
@@ -162,7 +166,7 @@ bindsym $mod+$smod+$numpad_off_8 move container to workspace $ws8
 bindsym $mod+$smod+$numpad_off_9 move container to workspace $ws9
 bindsym $mod+$smod+$numpad_off_0 move container to workspace $ws10
 
-bindsym $mod+$smod+Tab move container to workspace back_and_forth
+bindsym $alt+$smod+Tab move container to workspace back_and_forth
 
 #####################
 #    APPLICATION
@@ -173,7 +177,7 @@ bindsym $mod+$smod+Tab move container to workspace back_and_forth
 assign [class="librewolf"] $ws1
 assign [class="google-chrome"] $ws1
 
-assign [class="code-oss"] $ws2
+assign [class="VSCodium"] $ws2
 
 assign [class="Godot"] $ws3
 
@@ -182,6 +186,8 @@ assign [class="kitty"] $ws4
 assign [class="Thunar"] $ws5
 
 assign [class="discord"] $ws6
+
+assign [class="shortwave"] $ws10
 
 #####################
 #    APPEARANCE
@@ -209,7 +215,9 @@ exec --no-startup-id picom
 # polybar
 exec_always killall -q polybar; polybar
 # network manager applet
-exec_always killall -q nm-applet; nm-applet
+exec nm-applet
+# firewalld
+exec firewall-applet
 # wallpaper
 exec_always killall -q feh; feh --bg-fill $HOME/Pictures/wallpapers/red_4.jpg
 # the fuking clipboard, everything runs on this file lmao
