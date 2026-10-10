@@ -1,0 +1,128 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+      	{
+          "foreground": "#707070",
+          "style": "plain",
+          "template": "[",
+          "type": "session"
+        },
+        {
+          "foreground": "#950101",
+          "style": "plain",
+          "template": "{{ .UserName }} @ {{ .HostName }}",
+          "type": "session"
+        },
+        {
+          "foreground": "#707070",
+          "style": "powerline",
+          "template": "] in [",
+          "type": "path"
+        },
+        {
+          "foreground": "#933d06",
+          "options": {
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "\ue5ff {{ .Path }}",
+          "type": "path"
+        },
+        {
+          "foreground": "#707070",
+          "style": "powerline",
+          "template": "]",
+          "type": "path"
+        },
+        {
+          "foreground": "#707070",
+          "style": "plain",
+          "template": " in [",
+          "type": "git"
+        },
+        {
+          "foreground": "#dd8e47",
+          "options": {
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}",
+          "type": "git"
+        },
+        {
+          "foreground": "#707070",
+          "style": "plain",
+          "template": "]",
+          "type": "git"
+        },
+        {
+          "foreground": "#707070",
+          "style": "powerline",
+          "template": " using [",
+          "type": "python"
+        },
+        {
+          "foreground": "#dd8e47",
+          "style": "diamond",
+          "template": "\udb80\udf20 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+          "type": "python"
+        },
+        {
+          "foreground": "#707070",
+          "style": "powerline",
+          "template": "]",
+          "type": "python"
+        },
+        {
+          "foreground": "#707070",
+          "style": "powerline",
+          "template": " at [",
+          "type": "time"
+        },
+        {
+          "foreground": "#AAAAAA",
+          "options": {
+            "time_format": "15:04:05"
+          },
+          "style": "plain",
+          "template": "{{ .CurrentDate | date .Format }}",
+          "type": "time"
+        },
+        {
+          "foreground": "#707070",
+          "style": "powerline",
+          "template": "]",
+          "type": "time"
+        },
+        {
+          "foreground": "#950101",
+          "options": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "{{ if gt .Code 0 }} \u2620 {{else}} \u2713 {{ end }}",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#bbbbbb",
+          "style": "plain",
+          "template": "\uD83C\uDF41: ",
+          "type": "os"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 67
+}
