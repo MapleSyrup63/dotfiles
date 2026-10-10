@@ -128,16 +128,3 @@ entry {
     placeholder-color: darkgrey/90%;
     text-color: #FFFFFF;
   }
-    padding: 0px;
-
-    border:       3px 3px 0px ;
-    border-color: #950101;
-    border-radius:    3px 3px 0 0;
-    background-image: linear-gradient(to bottom, #950101, black/70%);
-}
-
-entry {
-    placeholder: "Oooh you wanna open TF2 ooooh...";
-    placeholder-color: darkgrey/60%;
-    text-color: #FFFFFFbb;
-  }
