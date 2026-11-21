@@ -57,7 +57,7 @@ bindsym $mod+d exec $rofi
 # Open screenshot utility
 bindsym Print exec xfce4-screenshooter
 
-# i3-lock
+# i3-lockCOLOR
 bindsym Scroll_Lock exec /bin/i3lock-riced/i3lock-riced.sh
 
 # Switch focus using cursor keys
@@ -219,6 +219,6 @@ exec nm-applet
 # firewalld
 exec firewall-applet
 # wallpaper
-exec_always killall -q feh; feh --bg-fill $HOME/Pictures/wallpapers/red_4.jpg
+exec_always killall -q feh; feh --bg-fill $HOME/Pictures/wallpapers/red_12.png
 # the fuking clipboard, everything runs on this file lmao
 exec_always killall -q xfce4-clipman; xfce4-clipman
